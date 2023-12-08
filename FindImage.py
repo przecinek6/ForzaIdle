@@ -1,3 +1,5 @@
+import time
+
 from KeyboardEvents import *
 
 
@@ -19,15 +21,22 @@ def findimage(image_name):
 
     pyag.moveTo(x, y)  # Setting cursor on current coordinates
 
-    if image_name != 4:
-        time.sleep(0.2)  # Time before next click
-        pyag.mouseDown()  # Mouse click down
-        pyag.mouseUp()  # Mouse click up
+    if image_name == 1:
+        time.sleep(0.2)
+        pyag.mouseDown()
+        pyag.mouseUp()
+        time.sleep(0.2)
+        pyag.mouseDown()
+        pyag.mouseUp()
 
-    time.sleep(0.2)  # Time before next click
-    pyag.mouseDown()  # Mouse click down
-    pyag.mouseUp()  # Mouse click up
+    elif image_name == 4:
+        time.sleep(0.2)
+        pyag.mouseDown()
+        pyag.mouseUp()
 
+    else:
+        time.sleep(0.2)
+        press_enter()
 
 
 def findimage_end():
