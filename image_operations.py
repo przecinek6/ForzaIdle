@@ -1,4 +1,5 @@
 from keyboard_events import *
+from mouse_event import *
 
 
 def findimage(image_name):
@@ -17,22 +18,14 @@ def findimage(image_name):
                 print(f'Unexpected  error at {image_name} segment...')
                 exit(image_name)
 
-
-
     if image_name == 1:
         pyag.moveTo(x, y)  # Setting cursor on current coordinates
-        time.sleep(0.2)
-        pyag.mouseDown()
-        pyag.mouseUp()
-        time.sleep(0.2)
-        pyag.mouseDown()
-        pyag.mouseUp()
+        left_click()
+        left_click()
 
     elif image_name == 4:
         pyag.moveTo(x, y)  # Setting cursor on current coordinates
-        time.sleep(0.2)
-        pyag.mouseDown()
-        pyag.mouseUp()
+        left_click()
 
     else:
         time.sleep(0.2)
